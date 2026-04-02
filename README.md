@@ -1,1 +1,1 @@
-This is the raw code for the model itself. It does not include the dataset.
+This is the raw code for the model itself. It does not include the dataset required to run the model.
