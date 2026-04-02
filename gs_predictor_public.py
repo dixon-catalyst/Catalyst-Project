@@ -211,3 +211,13 @@ print("Balanced Accuracy:", balanced_acc)
 print("Precision:", precision)
 print("Recall:", recall)
 print("F1:", f1)
+
+# === Feature importance ===
+feat_imp = pd.Series(best_rf.feature_importances_, index=X_train.columns)
+top_feats = feat_imp.sort_values(ascending=False).head(15)
+
+plt.figure(figsize=(10,6))
+sns.barplot(x=top_feats.values, y=top_feats.index)
+plt.title("Top 15 Important Features")
+plt.tight_layout()
+plt.show()
